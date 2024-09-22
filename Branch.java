@@ -17,3 +17,29 @@ public class Branch {
     public ArrayList<Customer> getCustomers(){
         return customers;
     }
+
+    public boolean newCustomer(String nameCustomer, double initialTransaction){
+        
+        
+         if (findCustomer(nameCustomer) == null) {
+             
+            customers.add(new Customer(nameCustomer, initialTransaction));
+            return true;
+        }
+        return false;
+        
+    }
+    
+    public boolean addCustomerTransaction(String nameCustomer, double transaction){
+        
+        Customer customer = findCustomer(nameCustomer);
+        
+        if (customer != null) {
+            
+            customer.addTransaction(transaction);
+            return true;
+        }
+        return false;
+        
+        
+    } 

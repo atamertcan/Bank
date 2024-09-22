@@ -40,6 +40,20 @@ public class Branch {
             return true;
         }
         return false;
-        
-        
+               
     } 
+
+    private Customer findCustomer(String nameCustomer){
+        
+        for (int i = 0; i < customers.size(); i++) {
+            
+            Customer customer = customers.get(i);
+            
+            if (customer.getName().equals(nameCustomer)) {
+                return customer;
+            }
+        }
+        return null;
+    }
+                  
+}

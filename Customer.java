@@ -11,3 +11,16 @@ public class Customer {
         transactions = new ArrayList<>();
         transactions.add(initialTransactions);
     }
+
+    public String getName(){
+        return name;
+    }
+    
+    public ArrayList<Double> getTransactions(){
+        return transactions;
+    }
+    
+    public void addTransaction(double transaction){
+        this.transactions.add(transaction);
+    }
+}
